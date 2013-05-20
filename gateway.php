@@ -569,7 +569,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
          * @return null
          * @author Jake Lee Kennedy
          **/
-        public function ipn_response()
+        function ipn_response()
         {
           @ob_clean();
 
@@ -598,7 +598,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
         }
 
 
-        public function process_valid_ipn_request($ttid, $merchant_ref)
+        function process_valid_ipn_request($ttid, $merchant_ref)
         {
 
           $order = &new WC_Order( $merchant_ref );
